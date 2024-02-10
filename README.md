@@ -1,27 +1,42 @@
-# MovieMate
+# GameSaga
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
+Welcome to GameSaga! This is my first Angular project aimed at showcasing details of various video games.
 
-## Development server
+## About
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+GameSaga is a web application built with Angular that allows users to explore a vast collection of video game details. From classic titles to the latest releases, GameSaga provides comprehensive information about each game, including its title, genre, release date, developer, and more.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Browse through a diverse selection of video games.
+- View detailed information about each game, including its title, genre, release date, and developer.
+- Enjoy a user-friendly interface designed for easy navigation.
 
-## Build
+## Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Frontend**: Angular, HTML, CSS, TypeScript
+- **Styling**: Bootstrap
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Getting Started
 
-## Running end-to-end tests
+To run GameSaga locally on your machine, follow these steps:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clone the repository:
 
-## Further help
+   ```bash
+   git clone https://github.com/your-username/GameSaga.git
+   cd game-saga
+   
+2. Install project dependencies.
+    ```bash
+    npm install
+  
+3. Start the development server with a proxy configuration:
+   ```bash
+   ng serve --proxy-config proxy.conf.json
+   
+4. Open your web browser and navigate to `http://localhost:4200` to view the application.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Contributing
+### Contributions are welcome! Feel free to open issues or pull requests for improvements.
