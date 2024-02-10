@@ -1,0 +1,35 @@
+.header-container {
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  background-color: #2B3C46;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  letter-spacing: 2px;
+  z-index: 10;
+
+  .logo,
+  .logout {
+    font-size: 20px;
+    cursor: pointer;
+    transition: border-bottom 0.3s ease;
+  }
+
+  .logo {
+    margin-left: 50px;
+    font-size: 35px;
+  }
+
+  .logout {
+    margin-right: 50px;
+    font-size: 20px;
+  }
+
+  .logo:hover,
+  .logout:hover {
+    text-decoration: underline;
+    text-underline-offset: 11px;
+  }
+}
