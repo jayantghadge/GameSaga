@@ -28,7 +28,7 @@ To run GameSaga locally on your machine, follow these steps:
    git clone https://github.com/your-username/GameSaga.git
    cd game-saga
    
-2. Install project dependencies.
+2. Install project dependencies:
     ```bash
     npm install
   
