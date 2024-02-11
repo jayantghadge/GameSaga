@@ -1,16 +1,15 @@
 .background-image {
   position: absolute;
   width: 100%;
-  height: 140vh;
+  height: 150vh;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
   filter: brightness(50%);
-
 }
 
 .game-container {
-  height: 140vh;
+  height: 150vh;
   backdrop-filter: blur(5px);
   position: relative;
   width: 100%;
@@ -18,6 +17,7 @@
   justify-content: center;
   align-items: center;
   color: white;
+  font-size: 20px;
 
   .game-section {
     margin-top: 5em;
@@ -50,7 +50,6 @@
           padding: 20px;
         }
       }
-
     }
 
     .requirement {
@@ -67,7 +66,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
 }
 
 .ss {
@@ -75,7 +73,52 @@
 }
 
 p {
-  font-size: 20px;
+  font-size: 26px;
   margin-top: 5px;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .game-container {
+    width: 100% !important;
+    margin: 0;
+    height: 220vh !important;
+    align-items: start;
+  }
+
+  .game-section {
+    width: 100% !important;
+    padding: 0 8px !important;
+  }
+
+  .background-image {
+    height: 220vh;
+    width: 100vw;
+  }
+
+  img {
+    width: 60% !important;
+    height: 180px;
+    margin: auto;
+    padding-bottom: 20px;
+  }
+
+  .cover {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .detail-grid {
+    margin: auto;
+    gap: 2px;
+
+    div {
+      padding: 0 !important;
+      font-size: 15px;
+    }
+  }
+
+  .requirement {
+    padding-bottom: 30px;
+  }
 }
