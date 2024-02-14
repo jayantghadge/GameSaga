@@ -13,6 +13,7 @@ export class HomeComponent {
   latestGames: any;
   ratedGames: any;
   sliderValue = 0;
+  loading: boolean = true;
   constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
@@ -35,6 +36,7 @@ export class HomeComponent {
       )
       .subscribe((games) => {
         this.trendingGames = games;
+        this.loading = false;
         console.log(this.trendingGames);
       });
   }

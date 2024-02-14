@@ -1,64 +1,85 @@
 <app-header></app-header>
 <div class="home-container">
-    <div class="main-section">
-        <div class="trend-section">
-            <h4>Trending Games</h4>
-        </div>
-        <div class="trending-games">
-            <div class="games-thumbnail">
-                <div class="game" *ngFor="let game of trendingGames">
-                    <div class="cover">
-                        <img [src]="game.thumbnail" alt="" (click)="goToGame('trending', game.id)">
-                    </div>
-                    <div class="detail">
-                        <div class="name" (click)="goToGame('trending', game.id)">{{game.title}}</div>
-                        <div class="genre">{{game.genre}}</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="popular-section">
-            <h4>Popular Games</h4>
-        </div>
-        <div class="popular-games">
-            <div class="games-thumbnail">
-                <div class="game" *ngFor="let game of popularGames">
-                    <div class="cover">
-                        <img [src]="game.thumbnail" alt="" (click)="goToGame('popularity', game.id)">
-                    </div>
-                    <div class="detail">
-                        <div class="name" (click)="goToGame('popularity', game.id)">{{game.title}}</div>
-                        <div class="genre">{{game.genre}}</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="rated-section">
-            <h4>Top Rated Games</h4>
-        </div>
-        <div class="rated-games">
-            <div class="games-thumbnail">
-                <div class="game" *ngFor="let game of ratedGames">
-                    <div class="cover">
-                        <img [src]="game.thumbnail" alt=""  (click)="goToGame('rating', game.id)">
-                    </div>
-                    <div class="detail">
-                        <div class="name" (click)="goToGame('rating', game.id)">{{game.title}}</div>
-                        <div class="genre">{{game.genre}}</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div *ngIf="loading" class="loader"></div>
+  <div class="main-section" *ngIf="!loading">
+    <div class="trend-section">
+      <h4>Trending Games</h4>
     </div>
-    <div class="latest-games">
-        <h4>Latest Releases</h4>
-        <div class="game" *ngFor="let game of latestGames">
-            <div class="detail">
-                <div class="name" (click)="goToGame('latest-release', game.id)">{{game.title}}</div>
-                <div class="genre">{{game.genre}}</div>
-                <hr>
+    <div class="trending-games">
+      <div class="games-thumbnail">
+        <div class="game" *ngFor="let game of trendingGames">
+          <div class="cover">
+            <img
+              [src]="game.thumbnail"
+              alt=""
+              (click)="goToGame('trending', game.id)"
+            />
+          </div>
+          <div class="detail">
+            <div class="name" (click)="goToGame('trending', game.id)">
+              {{ game.title }}
             </div>
+            <div class="genre">{{ game.genre }}</div>
+          </div>
         </div>
+      </div>
     </div>
+    <div class="popular-section">
+      <h4>Popular Games</h4>
+    </div>
+    <div class="popular-games">
+      <div class="games-thumbnail">
+        <div class="game" *ngFor="let game of popularGames">
+          <div class="cover">
+            <img
+              [src]="game.thumbnail"
+              alt=""
+              (click)="goToGame('popularity', game.id)"
+            />
+          </div>
+          <div class="detail">
+            <div class="name" (click)="goToGame('popularity', game.id)">
+              {{ game.title }}
+            </div>
+            <div class="genre">{{ game.genre }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rated-section">
+      <h4>Top Rated Games</h4>
+    </div>
+    <div class="rated-games">
+      <div class="games-thumbnail">
+        <div class="game" *ngFor="let game of ratedGames">
+          <div class="cover">
+            <img
+              [src]="game.thumbnail"
+              alt=""
+              (click)="goToGame('rating', game.id)"
+            />
+          </div>
+          <div class="detail">
+            <div class="name" (click)="goToGame('rating', game.id)">
+              {{ game.title }}
+            </div>
+            <div class="genre">{{ game.genre }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="latest-games" *ngIf="!loading">
+    <h4>Latest Releases</h4>
+    <div class="game" *ngFor="let game of latestGames">
+      <div class="detail">
+        <div class="name" (click)="goToGame('latest-release', game.id)">
+          {{ game.title }}
+        </div>
+        <div class="genre">{{ game.genre }}</div>
+        <hr />
+      </div>
+    </div>
+  </div>
 </div>
-<app-footer></app-footer> 
+<app-footer></app-footer>
