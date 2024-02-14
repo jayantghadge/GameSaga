@@ -5,14 +5,18 @@ import { HomeComponent } from './home/home.component';
 import { GamesComponent } from './games/games.component';
 
 const routes: Routes = [
-  {path: 'login', component: LoginComponent},
-    {path: 'home', component: HomeComponent},
-    {path: 'game/:type/:id', component: GamesComponent},
-    {path: '**', component: LoginComponent}
+  { path: 'login', component: LoginComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'game/:type/:id', component: GamesComponent },
+  { path: '**', component: LoginComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'top',
+    }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

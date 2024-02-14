@@ -13,6 +13,7 @@ export class GamesComponent {
   url = '';
   games: any;
   game: any;
+  loading: boolean = true;
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
@@ -30,6 +31,7 @@ export class GamesComponent {
 
     this.http.get(this.url, { headers }).subscribe((game) => {
       this.game = game;
+      this.loading = false;
     });
   }
 }

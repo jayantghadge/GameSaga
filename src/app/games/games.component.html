@@ -1,44 +1,53 @@
 <app-header></app-header>
-<div class="background-image" [style.backgroundImage]="'url(' + game?.screenshots[1].image + ')'"></div>
-<div class="game-container">
-    <div class="game-section">
-            <div class="name">{{ game?.title}}
-            </div>
-            <div class="cover">
-                <img [src]="game?.thumbnail" alt="">
-                <div class="detail-grid">
-                <div><b>Developer</b> <br>{{ game?.developer}}</div>
-                <div><b>Publisher</b> <br>{{ game?.publisher}}</div>
-                <div><b>Release-date </b><br>{{ game?.release_date}}</div>
-                <div><b>Genre</b> <br>{{ game?.genre}}</div>
-                <div><b>Platform </b><br>{{ game?.platform}}</div>
-                <div><b>Status</b><br>{{ game?.status}}</div>
-            </div>
-            </div>
-            <br>
-            <p>About {{game?.title}}</p>
-            <hr>
-            <div>{{game?.short_description}}</div>
-            <br>
-            <p>{{game?.title}} Screenshots</p>
-            <hr>
-        <div class="ss-section">
-        <img class="ss" [src]="game?.screenshots[0].image" alt="">
-        <img class="ss" [src]="game?.screenshots[1].image" alt="">
-        <img class="ss" [src]="game?.screenshots[2].image" alt="">
+<div
+  class="background-image"
+  [style.backgroundImage]="'url(' + game?.screenshots[1].image + ')'"
+></div>
+<div *ngIf="loading" class="loader"></div>
+<div class="game-container" id="game-page" *ngIf="!loading">
+  <div class="game-section">
+    <div class="name">{{ game?.title }}</div>
+    <div class="cover">
+      <img [src]="game?.thumbnail" alt="" />
+      <div class="detail-grid">
+        <div><b>Developer</b> <br />{{ game?.developer }}</div>
+        <div><b>Publisher</b> <br />{{ game?.publisher }}</div>
+        <div><b>Release-date </b><br />{{ game?.release_date }}</div>
+        <div><b>Genre</b> <br />{{ game?.genre }}</div>
+        <div><b>Platform </b><br />{{ game?.platform }}</div>
+        <div><b>Status</b><br />{{ game?.status }}</div>
+      </div>
     </div>
-    <br>
+    <br />
+    <p>About {{ game?.title }}</p>
+    <hr />
+    <div>{{ game?.short_description }}</div>
+    <br />
+    <p>{{ game?.title }} Screenshots</p>
+    <hr />
+    <div class="ss-section">
+      <img class="ss" [src]="game?.screenshots[0].image" alt="" />
+      <img class="ss" [src]="game?.screenshots[1].image" alt="" />
+      <img class="ss" [src]="game?.screenshots[2].image" alt="" />
+    </div>
+    <br />
     <p>Minimum System Requirements (Windows)</p>
-    <hr>
+    <hr />
     <div class="requirement">
-        <div><b>OS</b> <br>{{game?.minimum_system_requirements.os}}</div>
-        <div><b>Processor</b> <br>{{game?.minimum_system_requirements.processor}}</div>
-        <div><b>Memory</b> <br>{{game?.minimum_system_requirements.memory}}</div>
-        <div><b>Graphics</b> <br>{{game?.minimum_system_requirements.graphics}}</div>
-        <div><b>Storage</b> <br>{{game?.minimum_system_requirements.storage}}</div>
+      <div><b>OS</b> <br />{{ game?.minimum_system_requirements.os }}</div>
+      <div>
+        <b>Processor</b> <br />{{ game?.minimum_system_requirements.processor }}
+      </div>
+      <div>
+        <b>Memory</b> <br />{{ game?.minimum_system_requirements.memory }}
+      </div>
+      <div>
+        <b>Graphics</b> <br />{{ game?.minimum_system_requirements.graphics }}
+      </div>
+      <div>
+        <b>Storage</b> <br />{{ game?.minimum_system_requirements.storage }}
+      </div>
     </div>
-    
-    </div>
-   
+  </div>
 </div>
 <app-footer></app-footer>
