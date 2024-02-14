@@ -36,7 +36,6 @@ export class HomeComponent {
       )
       .subscribe((games) => {
         this.trendingGames = games;
-        this.loading = false;
         console.log(this.trendingGames);
       });
   }
@@ -73,6 +72,7 @@ export class HomeComponent {
       )
       .subscribe((games) => {
         this.ratedGames = games;
+        this.loading = false;
         console.log(this.ratedGames);
       });
   }
