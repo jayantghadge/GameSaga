@@ -38,4 +38,21 @@ To run GameSaga locally on your machine, follow these steps:
 4. Open your web browser and navigate to `http://localhost:4200` to view the application.
 
 ## Contributing
-### Contributions are welcome! Feel free to open issues or pull requests for improvements.
+
+If you'd like to contribute to GameSaga, please follow these steps:
+
+1. Fork the repository.
+
+2. Create a new branch for your feature or bug fix:
+   ```sh
+   git checkout -b feature/your-feature-name
+   ```
+
+3. Commit your changes and push to your fork:
+   ```sh
+   git commit -m "Add your feature"
+   git push origin feature/your-feature-name
+   ```
+
+4. Open a pull request on the original repository.
+
