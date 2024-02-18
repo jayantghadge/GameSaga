@@ -10,7 +10,7 @@ GameSaga is a web application built with Angular that allows users to explore a 
 
 - Browse through a diverse selection of video games.
 - View detailed information about each game, including its title, genre, release date, and developer.
-- Enjoy a user-friendly interface designed for easy navigation.
+- Enjoy a responsive and user-friendly interface designed for easy navigation.
 
 ## Technologies Used
 
