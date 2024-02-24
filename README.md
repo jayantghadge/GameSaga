@@ -14,7 +14,7 @@ GameSaga is a web application built with Angular that allows users to explore a 
 
 ## Technologies Used
 
-- **Frontend**: Angular, HTML, CSS, TypeScript
+- **Frontend**: Angular, TypeScript
 - **Styling**: Bootstrap
 
 
